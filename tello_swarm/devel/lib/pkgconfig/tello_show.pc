@@ -1,0 +1,8 @@
+prefix=/home/yujintong/tello_swarm/devel
+
+Name: tello_show
+Description: Description of tello_show
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

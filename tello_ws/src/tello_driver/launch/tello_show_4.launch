@@ -1,0 +1,117 @@
+<?xml version="1.0"?>
+<launch>
+	<!-- 已经支持在launch文件中修改IP ,先启动空循环-->
+	<!--<include file="$(find tello_position)/launch/tello0_control.launch" > -->
+	<arg name="tello_ip"                    default="000.000.0.000" /> <!-- 参数无效-->
+	<arg name="port"        	        default="0" />             <!-- 参数无效-->
+	<arg name="tello_cmd_server_port"	default="8889" /> 
+	<arg name="local_cmd_client_port"	default="8890" />
+	<arg name="local_vid_server_port"	default="6038" />
+	<arg name="camera_calibration"		default="$(find tello_driver)/cfg/960x720.yaml" />    
+	<arg name="namespace1"			default="tello1" />   
+	<arg name="namespace2"			default="tello2" /> 
+	<arg name="namespace3"			default="tello3" /> 
+	<arg name="namespace4"			default="tello4" /> 
+	<arg name="namespace5"			default="tello5" /> 
+	<arg name="namespace6"			default="tello6" /> 
+
+	<arg name="ID"         			default="100" /><!--参数无效--> 
+	<arg name="vel_P" 			default="0.1"/>
+	<arg name="vel_D" 			default="0.0"/>
+	<arg name="vel_I" 			default="0.0"/>
+	<arg name="w_P" 			default="0.01"/>
+
+		
+	<group ns="$(arg namespace1)">
+
+		<node pkg="tello_driver" name="tello_driver_node1" type="tello_driver_node" output="screen">
+			<param name="tello_ip"                  value="192.168.31.141"                />
+			<param name="port" 			value="9000"                         />
+			<param name="local_cmd_client_port"     value="$(arg local_cmd_client_port)" />
+			<param name="local_vid_server_port"     value="$(arg local_vid_server_port)" />
+			<param name="tello_cmd_server_port"     value="$(arg tello_cmd_server_port)" />
+			<param name="connect_timeout_sec"       value="30.0"                         />
+			<param name="stream_h264_video"         value="true"                         />
+			<param name="camera_calibration"        value="$(arg camera_calibration)"    />			
+		</node>
+
+
+	</group>
+
+	<group ns="$(arg namespace2)">
+
+		<node pkg="tello_driver" name="tello_driver_node2" type="tello_driver_node" output="screen">
+			<param name="tello_ip"                  value="192.168.31.142"                />
+			<param name="port" 			value="9010"                         />
+			<param name="local_cmd_client_port"     value="$(arg local_cmd_client_port)" />
+			<param name="local_vid_server_port"     value="$(arg local_vid_server_port)" />
+			<param name="tello_cmd_server_port"     value="$(arg tello_cmd_server_port)" />
+			<param name="connect_timeout_sec"       value="30.0"                         />
+			<param name="stream_h264_video"         value="true"                         />
+			<param name="camera_calibration"        value="$(arg camera_calibration)"    />			
+		</node>
+
+	</group>
+	
+	<group ns="$(arg namespace3)">
+
+		<node pkg="tello_driver" name="tello_driver_node3" type="tello_driver_node" output="screen">
+			<param name="tello_ip"                  value="192.168.31.144"                />
+			<param name="port" 			value="9020"                         />
+			<param name="local_cmd_client_port"     value="$(arg local_cmd_client_port)" />
+			<param name="local_vid_server_port"     value="$(arg local_vid_server_port)" />
+			<param name="tello_cmd_server_port"     value="$(arg tello_cmd_server_port)" />
+			<param name="connect_timeout_sec"       value="30.0"                         />
+			<param name="stream_h264_video"         value="true"                         />
+			<param name="camera_calibration"        value="$(arg camera_calibration)"    />			
+		</node>
+
+	</group>
+
+	<group ns="$(arg namespace4)">
+
+		<node pkg="tello_driver" name="tello_driver_node4" type="tello_driver_node" output="screen">
+			<param name="tello_ip"                  value="192.168.31.146"                />
+			<param name="port" 			value="9030"                         />
+			<param name="local_cmd_client_port"     value="$(arg local_cmd_client_port)" />
+			<param name="local_vid_server_port"     value="$(arg local_vid_server_port)" />
+			<param name="tello_cmd_server_port"     value="$(arg tello_cmd_server_port)" />
+			<param name="connect_timeout_sec"       value="30.0"                         />
+			<param name="stream_h264_video"         value="true"                         />
+			<param name="camera_calibration"        value="$(arg camera_calibration)"    />			
+		</node>
+
+	</group>
+	
+	<group ns="$(arg namespace5)">
+
+		<node pkg="tello_driver" name="tello_driver_node1" type="tello_driver_node" output="screen">
+			<param name="tello_ip"                  value="192.168.31.149"                />
+			<param name="port" 			value="9040"                         />
+			<param name="local_cmd_client_port"     value="$(arg local_cmd_client_port)" />
+			<param name="local_vid_server_port"     value="$(arg local_vid_server_port)" />
+			<param name="tello_cmd_server_port"     value="$(arg tello_cmd_server_port)" />
+			<param name="connect_timeout_sec"       value="30.0"                         />
+			<param name="stream_h264_video"         value="true"                         />
+			<param name="camera_calibration"        value="$(arg camera_calibration)"    />			
+		</node>
+
+
+	</group>
+
+	<group ns="$(arg namespace6)">
+
+		<node pkg="tello_driver" name="tello_driver_node1" type="tello_driver_node" output="screen">
+			<param name="tello_ip"                  value="192.168.31.150"                />
+			<param name="port" 			value="9050"                         />
+			<param name="local_cmd_client_port"     value="$(arg local_cmd_client_port)" />
+			<param name="local_vid_server_port"     value="$(arg local_vid_server_port)" />
+			<param name="tello_cmd_server_port"     value="$(arg tello_cmd_server_port)" />
+			<param name="connect_timeout_sec"       value="30.0"                         />
+			<param name="stream_h264_video"         value="true"                         />
+			<param name="camera_calibration"        value="$(arg camera_calibration)"    />			
+		</node>
+
+
+	</group>
+</launch>

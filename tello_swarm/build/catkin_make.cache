@@ -1,0 +1,2 @@
+tello_bishe:tello_show
+-DCATKIN_DEVEL_PREFIX=/home/yujintong/tello_swarm/devel -DCMAKE_INSTALL_PREFIX=/home/yujintong/tello_swarm/install -G Unix Makefiles

@@ -1,0 +1,8 @@
+prefix=/home/yujintong/tello_swarm/devel
+
+Name: tello_bishe
+Description: Description of tello_bishe
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

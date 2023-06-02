@@ -1,0 +1,2 @@
+tello_driver
+-DCATKIN_DEVEL_PREFIX=/home/yujintong/tello_ws/devel -DCMAKE_INSTALL_PREFIX=/home/yujintong/tello_ws/install -G Unix Makefiles
